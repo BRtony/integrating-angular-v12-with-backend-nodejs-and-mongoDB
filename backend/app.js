@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require ('cors');
 const mongoose = require ('mongoose');
 const department_controller = require('./department_controller')
+const product_controller = require('./product_controller')
 // import express, { json, urlencoded } from 'express';
 // import cors from 'cors';
 // import mongoose from 'mongoose';
@@ -16,6 +17,7 @@ app.use(cors());
 
 
 app.use('/departments', department_controller)
+app.use('/products', product_controller)
 
 app.listen(3000, () => {
     console.log("Servidor rodando na porta ", 3000);
