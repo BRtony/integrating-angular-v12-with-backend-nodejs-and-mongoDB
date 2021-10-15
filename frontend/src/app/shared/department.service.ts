@@ -4,9 +4,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 import { tap, delay } from 'rxjs/operators';
 import { Department } from './department';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class DepartmentService {
   readonly url = 'http://localhost:3000/departments';
   private departmentsSubject$: BehaviorSubject<Department[]> = new BehaviorSubject<Department[]>(null);

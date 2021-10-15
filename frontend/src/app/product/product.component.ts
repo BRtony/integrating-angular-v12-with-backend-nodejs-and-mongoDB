@@ -52,13 +52,13 @@ export class ProductComponent implements OnInit {
     if (this.prod) 
       this.productService.update({...data, _id: this.prod._id})
         .subscribe(
-          (prod) => this.notify("Updated!"),
+          (prod) => this.notify("UPDATED!"),
           (err) =>  this.notify(err.error.msg)
         );
     else 
       this.productService.add(data)
         .subscribe(
-          ()    => this.notify("Inserted!"),
+          ()    => this.notify("INSERTED!"),
           (err) => this.notify(err.error.msg)
         );      
     this.clearFields();
@@ -87,7 +87,7 @@ export class ProductComponent implements OnInit {
   del(p: Product) {
     this.productService.del(p)
     .subscribe(
-      ()    => this.notify("Removed!"),
+      ()    => this.notify("REMOVED!"),
       (err) => this.notify(err.error.msg)
     );    
   }

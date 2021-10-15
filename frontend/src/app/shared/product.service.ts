@@ -3,7 +3,7 @@ import { Product } from './product';
 import { HttpClient } from '@angular/common/http';
 import { Department } from './department';
 import { DepartmentService } from './department.service';
-import { BehaviorSubject, Observable, combineLatest, pipe, of } from 'rxjs';
+import { BehaviorSubject, Observable, combineLatest } from 'rxjs';
 import { tap, map, filter } from 'rxjs/operators';
 
 @Injectable()
